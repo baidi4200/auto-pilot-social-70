@@ -1,6 +1,7 @@
-import { useState } from "react";
+import { useState, useRef } from "react";
 import { motion } from "framer-motion";
 import { ArrowRight } from "lucide-react";
+import emailjs from "@emailjs/browser";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
@@ -8,15 +9,33 @@ import { toast } from "sonner";
 
 const ContactSection = () => {
   const [loading, setLoading] = useState(false);
+  const formRef = useRef<HTMLFormElement | null>(null);
 
-  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
+    if (!formRef.current) return;
+
+    const serviceId = import.meta.env.VITE_EMAILJS_SERVICE_ID;
+    const templateId = import.meta.env.VITE_EMAILJS_TEMPLATE_ID;
+    const publicKey = import.meta.env.VITE_EMAILJS_PUBLIC_KEY;
+
+    if (!serviceId || !templateId || !publicKey) {
+      toast.error("EmailJS is not configured. Please add your EmailJS IDs to your environment.");
+      return;
+    }
+
     setLoading(true);
-    setTimeout(() => {
+
+    try {
+      await emailjs.sendForm(serviceId, templateId, formRef.current, publicKey);
       setLoading(false);
       toast.success("Message sent! We'll be in touch within 24 hours.");
-      (e.target as HTMLFormElement).reset();
-    }, 1000);
+      formRef.current.reset();
+    } catch (error) {
+      setLoading(false);
+      toast.error("Unable to send the message right now. Please try again later.");
+      console.error("EmailJS error:", error);
+    }
   };
 
   return (
@@ -38,11 +57,11 @@ const ContactSection = () => {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
         >
-          <form onSubmit={handleSubmit} className="space-y-4">
-            <Input placeholder="Your Name" required className="bg-background/50 border-border/30" />
-            <Input type="email" placeholder="Email Address" required className="bg-background/50 border-border/30" />
-            <Input placeholder="Your Website URL (if you have one)" className="bg-background/50 border-border/30" />
-            <Textarea placeholder="Tell us about your business, your goals, and the type of website you need..." rows={4} className="bg-background/50 border-border/30" />
+          <form ref={formRef} onSubmit={handleSubmit} className="space-y-4">
+            <Input name="user_name" placeholder="Your Name" required className="bg-background/50 border-border/30" />
+            <Input name="user_email" type="email" placeholder="Email Address" required className="bg-background/50 border-border/30" />
+            <Input name="website_url" placeholder="Your Website URL (if you have one)" className="bg-background/50 border-border/30" />
+            <Textarea name="message" placeholder="Tell us about your business, your goals, and the type of website you need..." rows={4} className="bg-background/50 border-border/30" />
             <Button type="submit" className="w-full glow-blue" size="lg" disabled={loading}>
               {loading ? "Sending..." : (
                 <>Get Your Free Quote <ArrowRight className="ml-2 h-4 w-4" /></>
