@@ -1,10 +1,25 @@
 import { motion } from "framer-motion";
-import { Phone, Cog, Rocket } from "lucide-react";
+import { Phone, PenTool, Rocket } from "lucide-react";
 
 const steps = [
-  { icon: Phone, num: "01", title: "Discovery Call", desc: "We learn about your business, your platforms, and your biggest time-wasters." },
-  { icon: Cog, num: "02", title: "We Build Your Automations", desc: "Our team designs and builds custom automation workflows tailored to your exact needs." },
-  { icon: Rocket, num: "03", title: "You Save Time & Get More Leads", desc: "Sit back while your social media runs on autopilot. We handle maintenance and optimization." },
+  {
+    icon: Phone,
+    num: "01",
+    title: "Discovery & Strategy",
+    desc: "We start with a free consultation to understand your business, goals, target audience, and what success looks like for you.",
+  },
+  {
+    icon: PenTool,
+    num: "02",
+    title: "Design & Development",
+    desc: "We design and build your custom website, keeping you in the loop at every step. Modern, fast, mobile-responsive, and built to convert.",
+  },
+  {
+    icon: Rocket,
+    num: "03",
+    title: "Launch & Grow",
+    desc: "Your new website goes live and starts working for your business — generating leads, building credibility, and driving growth.",
+  },
 ];
 
 const HowItWorksSection = () => (
@@ -16,7 +31,7 @@ const HowItWorksSection = () => (
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
       >
-        How It <span className="gradient-text">Works</span>
+        How We <span className="gradient-text">Build Your Website</span>
       </motion.h2>
 
       <div className="grid grid-cols-1 md:grid-cols-3 gap-8 relative">

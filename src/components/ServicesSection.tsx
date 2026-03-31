@@ -1,15 +1,42 @@
 import { motion } from "framer-motion";
-import { UserPlus, CalendarClock, MessageCircle, Sparkles, FileBarChart, Bell, Hash, ShoppingCart } from "lucide-react";
+import { Globe, MonitorSmartphone, Building2, ShoppingCart, Briefcase, RefreshCw, Gauge } from "lucide-react";
 
 const services = [
-  { icon: UserPlus, title: "Lead Capture & CRM Automation", desc: "Automatically capture leads from comments, DMs, and ad forms — route them to your CRM, Google Sheet, and trigger welcome messages instantly." },
-  { icon: CalendarClock, title: "Content Scheduling & Cross-Posting", desc: "Create once, publish everywhere. Smart workflows auto-schedule and post across Instagram, Facebook, and TikTok." },
-  { icon: MessageCircle, title: "Comment & DM Auto-Replies", desc: "Instant, intelligent auto-replies to common DMs and comments with pricing, links, and FAQs — 24/7." },
-  { icon: Sparkles, title: "AI-Powered Caption Generation", desc: "AI generates scroll-stopping captions, hashtag sets, and content calendar ideas tailored to your niche." },
-  { icon: FileBarChart, title: "Automated Weekly/Monthly Reporting", desc: "Beautiful formatted reports with engagement stats delivered to your inbox automatically." },
-  { icon: Bell, title: "Review & Reputation Monitoring", desc: "Real-time alerts for every mention, tag, and review — delivered to Slack, Telegram, or WhatsApp." },
-  { icon: Hash, title: "UGC & Hashtag Tracking", desc: "Monitor branded hashtags and collect user-generated content into organized folders for reposting." },
-  { icon: ShoppingCart, title: "Abandoned Cart Follow-Ups", desc: "Auto-trigger follow-up messages via DM, Messenger, or email when customers drop off." },
+  {
+    icon: Globe,
+    title: "Custom Business Websites",
+    desc: "Tailored, high-performance websites built from the ground up to reflect your brand and convert visitors into paying customers.",
+  },
+  {
+    icon: MonitorSmartphone,
+    title: "Landing Pages",
+    desc: "High-converting, laser-focused landing pages designed to drive leads, sales, and sign-ups from your campaigns.",
+  },
+  {
+    icon: Building2,
+    title: "Corporate Websites",
+    desc: "Professional, credibility-building websites for established businesses that need to make a powerful first impression.",
+  },
+  {
+    icon: ShoppingCart,
+    title: "E-commerce Websites",
+    desc: "Feature-rich online stores built to sell. Fast, secure, and optimized for a seamless shopping experience that drives revenue.",
+  },
+  {
+    icon: Briefcase,
+    title: "Portfolio Websites",
+    desc: "Stunning portfolio sites that showcase your work and help you win more clients — designed to impress at first glance.",
+  },
+  {
+    icon: RefreshCw,
+    title: "Website Redesign",
+    desc: "Transform your outdated website into a modern, high-performing asset that reflects where your business is today.",
+  },
+  {
+    icon: Gauge,
+    title: "Website Optimization",
+    desc: "Speed, SEO, and conversion rate improvements for your existing website — so it ranks higher and converts more visitors.",
+  },
 ];
 
 const ServicesSection = () => (
@@ -17,9 +44,11 @@ const ServicesSection = () => (
     <div className="container mx-auto max-w-6xl">
       <motion.div className="text-center mb-14" initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}>
         <h2 className="font-display font-bold text-3xl md:text-4xl mb-3">
-          Our <span className="gradient-text">Automation Services</span>
+          Our <span className="gradient-text">Web Development Services</span>
         </h2>
-        <p className="text-muted-foreground text-lg">Powerful workflows that save you 15+ hours every week</p>
+        <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
+          Custom-built websites that establish your credibility, generate leads, and help your business grow online.
+        </p>
       </motion.div>
 
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">

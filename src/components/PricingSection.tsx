@@ -4,47 +4,50 @@ import { Button } from "@/components/ui/button";
 
 const plans = [
   {
-    name: "Starter",
-    price: "$297",
-    period: "/month",
+    name: "Landing Page",
+    price: "From $997",
+    period: " one-time",
     popular: false,
     features: [
-      "2 automation workflows",
-      "1 platform (IG, FB, or TikTok)",
-      "Basic lead capture setup",
-      "Email support",
-      "Monthly performance check-in",
+      "Single high-converting page",
+      "Mobile-responsive design",
+      "Contact / lead capture form",
+      "SEO basics setup",
+      "Fast load speed optimized",
+      "2 rounds of revisions",
     ],
-    bestFor: "Solopreneurs & small businesses just getting started",
+    bestFor: "Startups and campaigns that need a focused, conversion-ready page",
   },
   {
-    name: "Growth",
-    price: "$597",
-    period: "/month",
+    name: "Business Website",
+    price: "From $2,497",
+    period: " one-time",
     popular: true,
     features: [
-      "5 automation workflows",
-      "All 3 platforms (IG + FB + TikTok)",
-      "Lead capture + auto-replies + AI captions",
-      "Automated weekly reports",
-      "Priority support",
-      "Monthly strategy call",
+      "5–10 custom pages",
+      "Mobile-responsive design",
+      "SEO optimization",
+      "Contact forms & lead capture",
+      "Google Analytics integration",
+      "3 rounds of revisions",
+      "30-day post-launch support",
     ],
-    bestFor: "Growing brands ready to scale",
+    bestFor: "Small businesses and growing companies ready to establish a strong online presence",
   },
   {
-    name: "Enterprise",
+    name: "E-commerce / Custom",
     price: "Custom",
     period: "",
     popular: false,
     features: [
-      "Unlimited workflows",
-      "Full platform integration",
-      "Custom CRM & e-commerce automation",
-      "Dedicated automation manager",
-      "24/7 priority support",
+      "Full e-commerce or custom build",
+      "Product catalog & checkout",
+      "Payment gateway integration",
+      "CMS & admin dashboard",
+      "Performance & SEO optimized",
+      "Dedicated project manager",
     ],
-    bestFor: "Agencies & large brands",
+    bestFor: "Online stores, enterprises, and businesses with unique requirements",
   },
 ];
 
@@ -55,6 +58,7 @@ const PricingSection = () => (
         <h2 className="font-display font-bold text-3xl md:text-4xl mb-3">
           Simple, <span className="gradient-text">Transparent Pricing</span>
         </h2>
+        <p className="text-muted-foreground text-lg">No hidden fees. No surprises. Just results.</p>
       </motion.div>
 
       <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
@@ -74,7 +78,7 @@ const PricingSection = () => (
             )}
             <h3 className="font-display font-bold text-xl mb-1">{p.name}</h3>
             <div className="mb-6">
-              <span className="font-display font-bold text-4xl">{p.price}</span>
+              <span className="font-display font-bold text-3xl">{p.price}</span>
               <span className="text-muted-foreground text-sm">{p.period}</span>
             </div>
             <ul className="space-y-3 mb-8 flex-1">
@@ -88,7 +92,7 @@ const PricingSection = () => (
             <p className="text-xs text-muted-foreground mb-4">Best for: {p.bestFor}</p>
             <Button asChild variant={p.popular ? "default" : "outline"} className="w-full">
               <a href="#contact">
-                Get Started <ArrowRight className="ml-2 h-4 w-4" />
+                Get a Free Quote <ArrowRight className="ml-2 h-4 w-4" />
               </a>
             </Button>
           </motion.div>

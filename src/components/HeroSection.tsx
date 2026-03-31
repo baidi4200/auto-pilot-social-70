@@ -1,11 +1,11 @@
 import { motion } from "framer-motion";
-import { ArrowRight, Users, Target, Workflow } from "lucide-react";
+import { ArrowRight, Globe, TrendingUp, Star } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 const stats = [
-  { icon: Users, label: "50+ Businesses Automated" },
-  { icon: Target, label: "10,000+ Leads Captured" },
-  { icon: Workflow, label: "500+ Workflows Built" },
+  { icon: Globe, label: "50+ Websites Launched" },
+  { icon: TrendingUp, label: "3x Average Lead Increase" },
+  { icon: Star, label: "100% Client Satisfaction" },
 ];
 
 const HeroSection = () => (
@@ -20,7 +20,7 @@ const HeroSection = () => (
     <div className="container mx-auto text-center relative z-10 max-w-5xl">
       <motion.div initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.7 }}>
         <span className="inline-block px-4 py-1.5 mb-6 text-xs font-semibold uppercase tracking-widest border border-primary/30 rounded-full text-primary bg-primary/5">
-          Social Media Automation Agency
+          Custom Website Development Agency
         </span>
       </motion.div>
 
@@ -30,8 +30,8 @@ const HeroSection = () => (
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.7, delay: 0.1 }}
       >
-        We Automate Your Instagram, Facebook & TikTok —{" "}
-        <span className="gradient-text">So You Get More Leads on Autopilot</span>
+        Websites That Win Clients{" "}
+        <span className="gradient-text">and Grow Your Business</span>
       </motion.h1>
 
       <motion.p
@@ -40,7 +40,7 @@ const HeroSection = () => (
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.7, delay: 0.2 }}
       >
-        Stop wasting hours on repetitive social media tasks. Our smart automation workflows handle your posting, replies, lead capture, and reporting — while you focus on closing deals.
+        We build fast, modern, and conversion-focused websites for startups, small businesses, and growing companies. Establish your online presence, generate more leads, and stand out from competitors.
       </motion.p>
 
       <motion.div
@@ -51,7 +51,7 @@ const HeroSection = () => (
       >
         <Button asChild size="lg" className="text-base px-8 glow-blue">
           <a href="#contact">
-            Book a Free Strategy Call <ArrowRight className="ml-2 h-4 w-4" />
+            Get a Free Quote <ArrowRight className="ml-2 h-4 w-4" />
           </a>
         </Button>
         <Button asChild variant="outline" size="lg" className="text-base px-8 border-border/50 hover:bg-muted/30">

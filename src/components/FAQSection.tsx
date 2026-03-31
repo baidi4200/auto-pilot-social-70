@@ -2,12 +2,30 @@ import { motion } from "framer-motion";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 
 const faqs = [
-  { q: "What is social media automation?", a: "It's the process of using smart software workflows to handle repetitive tasks like posting, replying, lead capture, and reporting — so you don't have to do them manually." },
-  { q: "Will my accounts get banned?", a: "No. We use official APIs and approved integrations. Everything is safe, compliant, and within platform guidelines." },
-  { q: "How fast can you set things up?", a: "Most workflows are live within 3–5 business days after our discovery call." },
-  { q: "Do I need any technical knowledge?", a: "Not at all. We handle everything. You just tell us what you need, and we build it." },
-  { q: "Can I cancel anytime?", a: "Yes, all plans are month-to-month with no long-term contracts." },
-  { q: "What tools do you use?", a: "We use n8n, a powerful enterprise-grade automation platform, along with official APIs for Instagram, Facebook, TikTok, and 400+ other apps." },
+  {
+    q: "How long does it take to build a website?",
+    a: "Most projects are completed within 1–3 weeks depending on scope. A landing page typically takes 5–7 days, while a full business website takes 2–3 weeks. We'll give you a clear timeline before we start.",
+  },
+  {
+    q: "Do I own my website after it's built?",
+    a: "Yes, 100%. You own everything — the design, the code, and the content. Once the project is complete and paid in full, the website is entirely yours.",
+  },
+  {
+    q: "Will my website be mobile-friendly?",
+    a: "Absolutely. Every website we build is fully responsive and optimized for all devices — desktop, tablet, and mobile — from day one.",
+  },
+  {
+    q: "Do you offer website maintenance after launch?",
+    a: "Yes. We offer ongoing maintenance and support packages to keep your website secure, updated, and performing at its best. Ask us about options during your consultation.",
+  },
+  {
+    q: "Can you redesign my existing website?",
+    a: "Yes. Website redesign is one of our core services. Whether your site looks outdated, loads slowly, or isn't converting visitors, we'll transform it into a modern, high-performing asset.",
+  },
+  {
+    q: "What do you need from me to get started?",
+    a: "Just your business details, goals, and any branding materials you have (logo, colors, etc.). We guide you through the rest — no technical knowledge required on your end.",
+  },
 ];
 
 const FAQSection = () => (

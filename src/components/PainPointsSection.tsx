@@ -1,11 +1,11 @@
 import { motion } from "framer-motion";
-import { Clock, MessageSquareOff, BarChart3, UserX } from "lucide-react";
+import { AlertTriangle, TrendingDown, EyeOff, DollarSign } from "lucide-react";
 
 const pains = [
-  { icon: Clock, title: "Spending hours posting the same content on 3 platforms" },
-  { icon: MessageSquareOff, title: "Missing DMs and comments from potential customers" },
-  { icon: BarChart3, title: "No time to track analytics and create reports" },
-  { icon: UserX, title: "Losing leads because you can't follow up fast enough" },
+  { icon: AlertTriangle, title: "An outdated or slow website is costing you credibility every single day" },
+  { icon: TrendingDown, title: "Visitors leave without converting because your site isn't built to generate leads" },
+  { icon: EyeOff, title: "Competitors with stronger online presence are capturing your potential customers" },
+  { icon: DollarSign, title: "You're spending money on ads that send traffic to a website that doesn't convert" },
 ];
 
 const PainPointsSection = () => (
@@ -17,7 +17,8 @@ const PainPointsSection = () => (
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
       >
-        Tired of Doing Everything <span className="gradient-text">Manually?</span>
+        Your Business Deserves Better Than a{" "}
+        <span className="gradient-text">Mediocre Website</span>
       </motion.h2>
 
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
@@ -44,8 +45,8 @@ const PainPointsSection = () => (
         whileInView={{ opacity: 1 }}
         viewport={{ once: true }}
       >
-        What if all of this ran on autopilot?{" "}
-        <span className="text-foreground font-semibold">That's exactly what we build for you.</span>
+        We fix all of this.{" "}
+        <span className="text-foreground font-semibold">We build websites that work as hard as you do.</span>
       </motion.p>
     </div>
   </section>

@@ -1,16 +1,28 @@
 import { motion } from "framer-motion";
-import { Star, Clock, Zap, TrendingUp } from "lucide-react";
+import { Star, Globe, TrendingUp, Users } from "lucide-react";
 
 const testimonials = [
-  { quote: "We went from manually replying to 200+ DMs a day to fully automated responses. Our response time dropped from 6 hours to under 30 seconds.", name: "Sarah K.", role: "E-commerce Brand Owner" },
-  { quote: "The weekly reports alone save me 5 hours a week. I finally know what's working without opening 10 tabs.", name: "Ahmed R.", role: "Digital Marketing Manager" },
-  { quote: "They set up a lead capture system that brought in 300+ leads in the first month — all on autopilot.", name: "Jessica M.", role: "Fitness Coach" },
+  {
+    quote: "Our new website brought in 3x more inquiries within the first month. It's fast, looks incredible, and actually converts visitors into clients.",
+    name: "Michael T.",
+    role: "Restaurant Owner",
+  },
+  {
+    quote: "They redesigned our outdated website in under two weeks. Our bounce rate dropped significantly and we're getting more calls than ever before.",
+    name: "Priya L.",
+    role: "Law Firm Partner",
+  },
+  {
+    quote: "The e-commerce site they built transformed our business. Our online sales tripled within 60 days of launch. Best investment we've ever made.",
+    name: "David K.",
+    role: "Online Retailer",
+  },
 ];
 
 const stats = [
-  { icon: Clock, value: "15+", label: "Hours Saved Per Week" },
-  { icon: Zap, value: "3x", label: "Faster Lead Response" },
-  { icon: TrendingUp, value: "300%", label: "More Leads Captured" },
+  { icon: Globe, value: "50+", label: "Websites Launched" },
+  { icon: Users, value: "98%", label: "Client Satisfaction" },
+  { icon: TrendingUp, value: "3x", label: "Average Lead Increase" },
 ];
 
 const TestimonialsSection = () => (

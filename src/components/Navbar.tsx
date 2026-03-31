@@ -5,7 +5,7 @@ import { Button } from "@/components/ui/button";
 const navLinks = [
   { label: "Services", href: "#services" },
   { label: "How It Works", href: "#how-it-works" },
-  { label: "Pricing", href: "#pricing" },
+  { label: "Portfolio", href: "#portfolio" },
   { label: "FAQ", href: "#faq" },
 ];
 
@@ -28,7 +28,7 @@ const Navbar = () => {
             </a>
           ))}
           <Button asChild size="sm">
-            <a href="#contact">Book a Call</a>
+            <a href="#contact">Get a Free Quote</a>
           </Button>
         </div>
 
@@ -45,7 +45,7 @@ const Navbar = () => {
             </a>
           ))}
           <Button asChild className="w-full mt-2" size="sm">
-            <a href="#contact" onClick={() => setOpen(false)}>Book a Call</a>
+            <a href="#contact" onClick={() => setOpen(false)}>Get a Free Quote</a>
           </Button>
         </div>
       )}

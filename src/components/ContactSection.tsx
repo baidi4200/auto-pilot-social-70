@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
-import { Send, ArrowRight } from "lucide-react";
+import { ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
@@ -24,10 +24,11 @@ const ContactSection = () => {
       <div className="container mx-auto max-w-4xl">
         <motion.div className="text-center mb-12" initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}>
           <h2 className="font-display font-bold text-3xl md:text-4xl mb-3">
-            Ready to Put Your Social Media on <span className="gradient-text">Autopilot?</span>
+            Ready to Build a Website That{" "}
+            <span className="gradient-text">Grows Your Business?</span>
           </h2>
           <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
-            Book a free 15-minute strategy call and we'll show you exactly which automations can save you the most time and money.
+            Get a free consultation and project quote. Tell us about your business and we'll show you exactly what's possible.
           </p>
         </motion.div>
 
@@ -40,11 +41,11 @@ const ContactSection = () => {
           <form onSubmit={handleSubmit} className="space-y-4">
             <Input placeholder="Your Name" required className="bg-background/50 border-border/30" />
             <Input type="email" placeholder="Email Address" required className="bg-background/50 border-border/30" />
-            <Input placeholder="Instagram / Facebook URL" className="bg-background/50 border-border/30" />
-            <Textarea placeholder="Tell us about your business and goals..." rows={4} className="bg-background/50 border-border/30" />
+            <Input placeholder="Your Website URL (if you have one)" className="bg-background/50 border-border/30" />
+            <Textarea placeholder="Tell us about your business, your goals, and the type of website you need..." rows={4} className="bg-background/50 border-border/30" />
             <Button type="submit" className="w-full glow-blue" size="lg" disabled={loading}>
               {loading ? "Sending..." : (
-                <>Book Your Free Call Now <ArrowRight className="ml-2 h-4 w-4" /></>
+                <>Get Your Free Quote <ArrowRight className="ml-2 h-4 w-4" /></>
               )}
             </Button>
           </form>
